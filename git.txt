@@ -24,3 +24,38 @@ GIT 명령어
 3. 저장소 전 장바구니에 담기(커밋)
 -> git add .  => 파일전부
 -> git add git.txt  => 일부만
+
+4. 사용자 본인 등록(커밋 전)
+4-1. 기등록된 사용자 확인
+> git config user.name
+> git config user.email
+
+안나오면 4-3으로 (유저등록)
+뭐가 나오면, 4-2로 지워주고, 4-3 유저등록
+
+4-2. 사용자를 초기화하는 명령어
+
+여러명과 사용하는 컴퓨터일 경우, 타인의 정보가 등록되었을 수 있다.
+> git config --global --unset-all user.name
+> git config --global --unset-all user.email
+
+다시 한번 확인
+
+> git config user.name
+> git config user.email
+
+4-3. 내 정보 등록
+git config user.name "[깃허브아이디]"
+git config user.email "[깃허브가입이메일]"
+
+git config user.name "donhyuck"
+git config user.email "leedonhyuck123@gmail.com"
+
+다시 한번 확인
+> git config user.name
+> git config user.email
+
+5. 커밋
+> git commit -m "~~커밋제목~~"
+> git log
+커밋내역을 살펴볼수있다.
