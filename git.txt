@@ -59,3 +59,16 @@ git config user.email "leedonhyuck123@gmail.com"
 > git commit -m "~~커밋제목~~"
 > git log
 커밋내역을 살펴볼수있다.
+
+6. 두번째 커밋(작업을 진행해나갔을 경우)
+추가 작업으로 저장소와 작업파일간의 차이가 생겼다.
+
+modified:    git.txt
+"git.txt파일이 수정되었습니다. git add 나 git commit을 하세요"
+
+두번째 커밋을 하고, log로 그 내역을 볼 수 있으며, 사용자가 언제 무슨 제목의 커밋을 했는지 볼 수 있다.
+
+7. 마지막 커밋 상태 파일로 돌아가기
+> git checkout -f .
+
+작업파일은 변화가 있어도 이걸 다 날리고 다시 마지막 커밋 상태로 돌아간다. 저장소상태와 동일하게 만든다.
