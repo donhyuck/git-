@@ -72,3 +72,41 @@ modified:    git.txt
 > git checkout -f .
 
 작업파일은 변화가 있어도 이걸 다 날리고 다시 마지막 커밋 상태로 돌아간다. 저장소상태와 동일하게 만든다.
+
+8. 세번째 커밋
+9. 커밋코드로 이동
+> git checkout -f "이동할 커밋주소 붙여넣기~~"
+=> 작업폴더 상태가 예전모습이다.
+
+이후, 다시 원래대로 돌아오기
+> git checkout -f .
+> git checkout -f master
+
+10. 원격 저장소와 연결
+> git remote -v
+기존 연결 확인
+
+> git remote add origin [원격리포지터리주소]
+원격리포지터리를 origin 이라는 즐겨찾기 이름으로 변경
+origin 이라는 이름은 다른 이름으로 바꿔도 됩니다.
+
+> git remote remove origin
+origin 이라는 이름의 즐겨찾기(외부 리포지터리와의 연결) 제거
+
+11. 원격저장소에 업로드
+> git push origin master
+origin 이 가리키는 원격지 주소로 로컬 리포지터리의 커밋들을 업로드
+
+처음엔 저장된 리포트가 없다.
+remote add를 하고 push를 한다.
+
+12. 다른 공간B에서 기존작업이어하기(pull)
+<다른 작업공간 내>
+1) 다른 작업공간에서도 일단 저장소는 만들어야 받을 수 있다.
+> git init
+
+2) 저장소--(연결)--다른 작업공간
+> git remote origin ~~작업git주소~~
+
+3) pull로 기존작업가져오기
+> git pull origin master
